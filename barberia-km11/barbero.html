@@ -1,0 +1,392 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=cb808458-3035-4458-afbe-aa7f560f46d5
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. --><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>KM11 · Panel del barbero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#f5b50f;--ok:#2fd27a;--bad:#ff7b7b;--mut:#9b9b9b;--ln:#2a2a2a;--hf:'Bebas Neue',Impact,sans-serif;--bf:Inter,system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+html{scroll-padding-top:120px}
+body{background:#000;color:#f2efe8;font:400 16px/1.5 var(--bf);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#000;z-index:60}
+[hidden]{display:none!important}
+h1,h2,h3{font-family:var(--hf);font-weight:400;letter-spacing:.02em;line-height:.95}
+h2{font-size:clamp(2.4rem,9vw,3.4rem);margin-bottom:.3rem}
+h3{font-size:1.7rem}
+:focus-visible{outline:2px solid var(--g);outline-offset:3px}
+.btn{display:inline-block;background:var(--g);color:#000;border:0;border-radius:999px;padding:.9rem 1.7rem;font:1.3rem/1 var(--hf);letter-spacing:.06em;cursor:pointer;min-height:48px;transition:transform .15s}
+.btn:active{transform:scale(.96)}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.ghost,.danger{background:none;border:1.5px solid var(--ln);color:#eee;border-radius:999px;padding:.55rem 1.1rem;font:600 .9rem var(--bf);cursor:pointer;min-height:44px}
+.ghost:hover{border-color:var(--g);color:var(--g)}
+.danger{border-color:#6b2a2a;color:var(--bad)}.danger:hover{background:rgba(255,123,123,.1);border-color:var(--bad)}
+.ghost:disabled,.danger:disabled{opacity:.45;cursor:not-allowed}
+.err{color:var(--bad);font-size:.9rem;min-height:1.3em}
+.sub{color:var(--mut);margin-bottom:1.2rem;max-width:56ch}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.9rem}
+input[type=text],input[type=password],input[type=number],input[type=time]{background:#151515;color:#fff;border:1.5px solid var(--ln);border-radius:12px;padding:.8rem;font:400 1rem var(--bf);width:100%;min-height:48px}
+input[type=file]{font:400 .95rem var(--bf);color:var(--mut);width:100%}
+input[type=checkbox]{width:22px;height:22px;accent-color:var(--g)}
+.card{background:#0d0d0d;border:1px solid var(--ln);border-radius:20px;padding:1.1rem;display:grid;gap:.9rem}
+/* login */
+.login{min-height:100svh;display:grid;place-items:center;padding:1.2rem}
+.lg{width:min(100%,380px);display:grid;gap:1rem}
+.lg .mark{font:5.5rem/.9 var(--hf);color:var(--g);letter-spacing:.04em}
+.lg h1{font-size:2.2rem;color:#fff}
+.lg form{display:grid;gap:1rem}
+/* estructura */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.5rem 1rem}
+.brand{font:1.9rem/1 var(--hf);color:#fff;display:flex;align-items:baseline;gap:.6rem}.brand small{font:600 .82rem var(--bf);color:var(--mut)}
+.tabs{display:flex;gap:.4rem;overflow-x:auto;padding:0 1rem .6rem;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:0 0 auto;border:1.5px solid var(--ln);background:#111;color:#d8d4cc;border-radius:999px;padding:.5rem 1.15rem;font:600 .92rem var(--bf);cursor:pointer;min-height:44px}
+.tabs button[aria-selected=true]{border-color:var(--g);background:rgba(245,181,15,.12);color:var(--g)}
+.v{padding:1.6rem 1.1rem 4rem;max-width:720px;margin:auto}
+.v .row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:1rem}
+.empty{color:var(--mut);border:1.5px dashed var(--ln);border-radius:16px;padding:1.4rem;text-align:center}
+/* turnos */
+.dayh{margin:1.6rem 0 .6rem;color:var(--g);font-size:1.5rem}
+.bk{display:grid;grid-template-columns:78px 1fr;gap:.2rem .9rem;align-items:start;background:#0d0d0d;border:1px solid var(--ln);border-radius:16px;padding:.9rem 1rem;margin-bottom:.6rem}
+.bk .t{font:2.3rem/1 var(--hf);color:#fff}
+.bk b{display:block;word-break:break-word}
+.bk span{display:block;color:var(--mut);font-size:.9rem;word-break:break-word}
+.bk .danger{grid-column:1/-1;margin-top:.5rem}
+/* horarios */
+.dr{background:#0d0d0d;border:1px solid var(--ln);border-radius:16px;padding:.9rem 1rem;margin-bottom:.6rem;display:grid;gap:.6rem}
+.dh{display:flex;justify-content:space-between;align-items:center}.dh b{font:1.6rem/1 var(--hf)}
+.sw{display:flex;align-items:center;gap:.5rem;font-weight:600;font-size:.9rem;cursor:pointer}
+.cl{color:var(--mut);font-size:.9rem}
+.rr{display:grid;grid-template-columns:1fr auto 1fr auto;gap:.5rem;align-items:center}
+.rr span{color:var(--mut)}
+.rr .x{width:44px;height:44px;padding:0;font-size:1.1rem;border-radius:50%}
+/* cortes */
+.ct{display:grid;grid-template-columns:72px 1fr auto;gap:.8rem;align-items:center;background:#0d0d0d;border:1px solid var(--ln);border-radius:16px;padding:.7rem;margin-bottom:.6rem}
+.ct img{width:72px;height:96px;object-fit:cover;border-radius:10px;background:#000}
+.ct b{word-break:break-word}
+.pv{width:120px;height:160px;object-fit:cover;border-radius:12px;border:1.5px solid var(--ln)}
+.sp{margin-top:1.8rem;display:grid;gap:.9rem}
+.big{font:2.4rem/1 var(--hf);color:var(--g)}
+#toast{position:fixed;left:50%;bottom:calc(1.2rem + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:#161616;border:1.5px solid var(--ok);color:#fff;border-radius:14px;padding:.8rem 1.1rem;max-width:min(92vw,420px);font-size:.95rem;opacity:0;pointer-events:none;transition:.25s;z-index:200}
+#toast.show{opacity:1;transform:translate(-50%,0)}#toast.bad{border-color:var(--bad)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important}}
+</style></head><body>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<main id="login" class="login" hidden>
+  <div class="lg">
+    <div class="mark">KM11</div>
+    <h1>Panel del barbero</h1>
+    <form id="lf">
+      <label>Contraseña<input id="pw" type="password" autocomplete="current-password" required></label>
+      <button class="btn" id="lgo" type="submit">Entrar</button>
+      <p class="err" id="lerr" role="alert"></p>
+    </form>
+  </div>
+</main>
+
+<div id="app" hidden>
+  <div class="top">
+    <div class="bar"><div class="brand">KM11<small>Panel del barbero</small></div><button class="ghost" id="out" type="button">Salir</button></div>
+    <div class="tabs" role="tablist" aria-label="Secciones del panel">
+      <button role="tab" type="button" data-v="bk" aria-selected="true">Turnos</button>
+      <button role="tab" type="button" data-v="hr" aria-selected="false">Horarios</button>
+      <button role="tab" type="button" data-v="ct" aria-selected="false">Cortes</button>
+      <button role="tab" type="button" data-v="pr" aria-selected="false">Precio</button>
+    </div>
+  </div>
+
+  <section class="v" id="v-bk" role="tabpanel">
+    <h2>Turnos reservados</h2>
+    <p class="sub" id="bk-sum">Cargando…</p>
+    <div id="bk-list"></div>
+    <div class="row"><button class="ghost" id="bk-ref" type="button">Actualizar</button></div>
+  </section>
+
+  <section class="v" id="v-hr" role="tabpanel" hidden>
+    <h2>Horarios de atención</h2>
+    <p class="sub">Cada corte dura 40 minutos. Los clientes ven los cambios apenas guardás.</p>
+    <div id="hr-list"></div>
+    <div class="row"><button class="btn" id="hr-save" type="button">Guardar horarios</button></div>
+    <p class="err" id="hr-err" role="alert"></p>
+  </section>
+
+  <section class="v" id="v-ct" role="tabpanel" hidden>
+    <h2>Cortes</h2>
+    <p class="sub">Los cortes que añadas aparecen al final de la sección «Cortes🔥» de la web. Los 6 originales no se borran desde acá.</p>
+    <div id="ct-list"></div>
+    <div class="card sp" style="margin-top:1.4rem">
+      <h3>Añadir un corte</h3>
+      <label>Nombre del corte<input id="ct-name" type="text" maxlength="40" autocomplete="off"></label>
+      <label>Foto<input id="ct-file" type="file" accept="image/*"></label>
+      <img id="ct-prev" class="pv" alt="Vista previa de la foto" hidden>
+      <div><button class="btn" id="ct-add" type="button">Añadir corte</button></div>
+      <p class="err" id="ct-err" role="alert"></p>
+    </div>
+  </section>
+
+  <section class="v" id="v-pr" role="tabpanel" hidden>
+    <h2>Precio del corte</h2>
+    <p class="sub">Es el precio del corte en el local. El corte a domicilio se muestra a $13.000.</p>
+    <div class="card">
+      <label>Precio en pesos (ARS)<input id="pr-in" type="number" inputmode="numeric" min="1" max="10000000" step="1"></label>
+      <div class="big" id="pr-show"></div>
+      <div><button class="btn" id="pr-save" type="button">Guardar precio</button></div>
+      <p class="err" id="pr-err" role="alert"></p>
+    </div>
+    <div class="card sp">
+      <h3>Cambiar la contraseña</h3>
+      <label>Contraseña actual<input id="pw-old" type="password" autocomplete="current-password"></label>
+      <label>Contraseña nueva (mínimo 8 caracteres)<input id="pw-new" type="password" autocomplete="new-password"></label>
+      <label>Repetir la contraseña nueva<input id="pw-new2" type="password" autocomplete="new-password"></label>
+      <div><button class="btn" id="pw-save" type="button">Cambiar contraseña</button></div>
+      <p class="err" id="pw-err" role="alert"></p>
+    </div>
+  </section>
+</div>
+
+<script>
+(()=>{
+"use strict";
+const SB="https://khvayzmuradaokjltufd.supabase.co",KEY="sb_publishable_8cRdRO4kgUitq08bcS8jiA_oB1o0HkU",TZ="America/Argentina/Buenos_Aires";
+const $=s=>document.querySelector(s);
+const ORDER=[1,2,3,4,5,6,0],DAYS=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+let TOK=null;try{TOK=localStorage.getItem("km11_tok")}catch(e){}
+const setTok=t=>{TOK=t;try{t?localStorage.setItem("km11_tok",t):localStorage.removeItem("km11_tok")}catch(e){}};
+class Unauth extends Error{}
+
+async function rpc(fn,args){
+  const ac=new AbortController(),to=setTimeout(()=>ac.abort(),15000);
+  try{
+    const h={"Content-Type":"application/json",apikey:KEY};
+    if(KEY.startsWith("eyJ"))h.Authorization="Bearer "+KEY;
+    const r=await fetch(SB+"/rest/v1/rpc/"+fn,{method:"POST",headers:h,body:JSON.stringify(args||{}),signal:ac.signal});
+    if(!r.ok)throw new Error("http "+r.status);
+    return await r.json();
+  }finally{clearTimeout(to)}
+}
+async function adm(fn,args){
+  const r=await rpc(fn,Object.assign({p_token:TOK},args||{}));
+  if(r&&r.error==="unauthorized"){toLogin("Tu sesión venció. Ingresá de nuevo.");throw new Unauth()}
+  return r;
+}
+function toast(msg,bad){const t=$("#toast");t.textContent=msg;t.className="show"+(bad?" bad":"");clearTimeout(toast.t);toast.t=setTimeout(()=>{t.className=""},4500)}
+async function run(fn,btn,errEl){
+  if(btn)btn.disabled=true;
+  try{return await fn()}
+  catch(e){if(!(e instanceof Unauth)){const m="No se pudo conectar. Revisá tu internet y probá de nuevo.";errEl?errEl.textContent=m:toast(m,true)}}
+  finally{if(btn)btn.disabled=false}
+}
+
+/* fechas (hora de Argentina) */
+const todayAR=()=>{const p=new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()),g=t=>p.find(x=>x.type===t).value;return g("year")+"-"+g("month")+"-"+g("day")};
+const addDays=(d,n)=>{const t=new Date(d+"T12:00:00Z");t.setUTCDate(t.getUTCDate()+n);return t.toISOString().slice(0,10)};
+const F=(d,o)=>new Intl.DateTimeFormat("es-AR",Object.assign({},o,{timeZone:"UTC"})).format(new Date(d+"T12:00:00Z"));
+const money=n=>"$"+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,".")+" ARS";
+const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
+
+/* ---------- sesión ---------- */
+function toLogin(msg){setTok(null);$("#app").hidden=true;$("#login").hidden=false;$("#lerr").textContent=msg||"";$("#pw").value="";clearInterval(auto)}
+function toApp(){$("#login").hidden=true;$("#app").hidden=false;show("bk")}
+$("#lf").addEventListener("submit",e=>{
+  e.preventDefault();
+  const b=$("#lgo"),er=$("#lerr");er.textContent="";
+  run(async()=>{
+    const r=await rpc("km11_admin_login",{p_password:$("#pw").value});
+    if(r&&r.ok){setTok(r.token);toApp();return}
+    const c=r&&r.error;
+    er.textContent=c==="locked"?"Demasiados intentos. Probá de nuevo en "+r.minutes+(r.minutes===1?" minuto.":" minutos."):
+      c==="not_set"?"El panel todavía no tiene contraseña.":"Contraseña incorrecta.";
+  },b,er);
+});
+$("#out").onclick=()=>{const t=TOK;toLogin("");if(t)rpc("km11_admin_logout",{p_token:t}).catch(()=>{})};
+
+/* ---------- pestañas ---------- */
+let auto=null;
+function show(v){
+  document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.v===v)));
+  ["bk","hr","ct","pr"].forEach(k=>{$("#v-"+k).hidden=k!==v});
+  clearInterval(auto);window.scrollTo(0,0);
+  if(v==="bk"){run(loadBookings);auto=setInterval(()=>{if(!document.hidden)run(loadBookings)},20000)}
+  if(v==="hr")run(loadHours,null,$("#hr-err"));
+  if(v==="ct")run(loadCuts);
+  if(v==="pr")run(loadPrice);
+}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>show(b.dataset.v));
+
+/* ---------- turnos ---------- */
+async function loadBookings(){
+  const r=await adm("km11_admin_bookings"),list=$("#bk-list");
+  if(!r||!r.ok)throw new Error("bookings");
+  const items=r.bookings;list.textContent="";
+  $("#bk-sum").textContent=items.length?(items.length===1?"1 turno reservado.":items.length+" turnos reservados."):"";
+  if(!items.length){list.append(el("p","empty","Todavía no hay turnos reservados. Cuando alguien reserve desde la web, aparece acá."));return}
+  const hoy=todayAR(),man=addDays(hoy,1);let cur=null;
+  items.forEach(b=>{
+    if(b.d!==cur){cur=b.d;const pre=b.d===hoy?"Hoy, ":b.d===man?"Mañana, ":"";
+      list.append(el("h3","dayh",pre+F(b.d,{weekday:"long",day:"numeric",month:"long"})))}
+    const c=el("div","bk");
+    c.append(el("div","t",b.t));
+    const info=el("div");info.append(el("b",null,b.name));
+    info.append(el("span",null,b.service));
+    info.append(el("span",null,b.mode==="dom"?"A domicilio: "+b.address:"En el local"+(b.price?" · "+money(b.price):"")));
+    c.append(info);
+    const x=el("button","danger","Cancelar turno");x.type="button";
+    x.onclick=()=>{
+      if(!confirm("¿Cancelar el turno de "+b.name+" ("+F(b.d,{weekday:"long",day:"numeric",month:"long"})+", "+b.t+" hs)?\nEl horario vuelve a quedar libre para otros clientes."))return;
+      run(async()=>{
+        const q=await adm("km11_admin_cancel",{p_id:b.id});
+        if(q&&(q.ok||q.error==="not_found"))toast("Turno cancelado. El horario quedó libre.");else toast("No se pudo cancelar el turno.",true);
+        await loadBookings();
+      },x);
+    };
+    c.append(x);list.append(c);
+  });
+}
+$("#bk-ref").onclick=e=>run(loadBookings,e.currentTarget);
+
+/* ---------- horarios ---------- */
+let H={};
+const mins=s=>+s.slice(0,2)*60+ +s.slice(3);
+const emptyH=()=>{const o={};for(let i=0;i<7;i++)o[i]=[];return o};
+async function loadHours(){
+  const s=await rpc("km11_public_state");
+  if(!s||!s.ok)throw new Error("state");
+  H=emptyH();Object.keys(s.hours||{}).forEach(k=>{H[k]=(s.hours[k]||[]).map(x=>[x[0],x[1]])});
+  $("#hr-err").textContent="";drawHours();
+}
+function drawHours(){
+  const box=$("#hr-list");box.textContent="";
+  ORDER.forEach(w=>{
+    const d=el("div","dr"),h=el("div","dh");h.append(el("b",null,DAYS[w]));
+    const sw=el("label","sw"),cb=document.createElement("input");cb.type="checkbox";cb.checked=H[w].length>0;
+    cb.onchange=()=>{H[w]=cb.checked?[["09:00","13:00"]]:[];drawHours()};
+    sw.append(cb,el("span",null,cb.checked?"Abierto":"Cerrado"));h.append(sw);d.append(h);
+    if(!H[w].length)d.append(el("div","cl","Cerrado todo el día."));
+    H[w].forEach((rg,i)=>{
+      const r=el("div","rr"),a=document.createElement("input"),b=document.createElement("input");
+      a.type=b.type="time";a.value=rg[0];b.value=rg[1];
+      a.setAttribute("aria-label",DAYS[w]+": desde");b.setAttribute("aria-label",DAYS[w]+": hasta");
+      a.onchange=()=>{rg[0]=a.value};b.onchange=()=>{rg[1]=b.value};
+      const x=el("button","ghost x","✕");x.type="button";x.setAttribute("aria-label","Quitar franja");
+      x.onclick=()=>{H[w].splice(i,1);drawHours()};
+      r.append(a,el("span",null,"a"),b,x);d.append(r);
+    });
+    if(H[w].length&&H[w].length<3){const ad=el("button","ghost","Agregar otra franja");ad.type="button";
+      ad.onclick=()=>{const l=H[w][H[w].length-1],a0=l&&/^\d\d:\d\d$/.test(l[1])?l[1]:"09:00",t=Math.min(mins(a0)+120,1439);
+        H[w].push([a0,String(t/60|0).padStart(2,"0")+":"+String(t%60).padStart(2,"0")]);drawHours()};d.append(ad)}
+    box.append(d);
+  });
+}
+function checkHours(){
+  for(const w of ORDER){
+    const r=H[w].slice().sort((p,q)=>p[0]<q[0]?-1:1);let prev=-1;
+    for(const x of r){
+      if(!/^\d\d:\d\d$/.test(x[0]||"")||!/^\d\d:\d\d$/.test(x[1]||""))return DAYS[w]+": completá la hora de inicio y de fin.";
+      if(mins(x[0])>=mins(x[1]))return DAYS[w]+": la hora de inicio tiene que ser antes que la de fin.";
+      if(mins(x[0])<prev)return DAYS[w]+": las franjas no pueden superponerse.";
+      prev=mins(x[1]);
+    }
+  }
+  return "";
+}
+$("#hr-save").onclick=e=>{
+  const er=$("#hr-err");er.textContent="";
+  const bad=checkHours();if(bad){er.textContent=bad;return}
+  const out={};ORDER.forEach(w=>{if(H[w].length)out[w]=H[w].slice().sort((p,q)=>p[0]<q[0]?-1:1)});
+  run(async()=>{
+    const r=await adm("km11_admin_set_hours",{p_hours:out});
+    if(r&&r.ok){
+      H=emptyH();Object.keys(r.hours).forEach(k=>{H[k]=r.hours[k]});drawHours();
+      const n=r.conflicts|0;
+      toast(n?"Guardado. Ojo: "+n+(n===1?" turno ya reservado queda":" turnos ya reservados quedan")+" fuera del nuevo horario. Revisalos en Turnos.":"Horarios guardados. Ya se ven en la web.",!!n);
+    }else er.textContent="No se pudieron guardar los horarios. Revisá que las horas estén bien.";
+  },e.currentTarget,er);
+};
+
+/* ---------- cortes ---------- */
+async function loadCuts(){
+  const r=await rpc("km11_public_cuts"),list=$("#ct-list");
+  if(!r||!r.ok)throw new Error("cuts");
+  list.textContent="";
+  if(!r.cuts.length){list.append(el("p","empty","Todavía no añadiste ningún corte."));return}
+  r.cuts.forEach(c=>{
+    const row=el("div","ct"),im=document.createElement("img");im.src=c.s;im.alt=c.n;
+    row.append(im,el("b",null,c.n));
+    const x=el("button","danger","Eliminar");x.type="button";
+    x.onclick=()=>{
+      if(!confirm("¿Eliminar el corte «"+c.n+"»? Va a desaparecer de la web."))return;
+      run(async()=>{
+        const q=await adm("km11_admin_delete_cut",{p_id:c.id});
+        toast(q&&(q.ok||q.error==="not_found")?"Corte eliminado.":"No se pudo eliminar el corte.",!(q&&(q.ok||q.error==="not_found")));
+        await loadCuts();
+      },x);
+    };
+    row.append(x);list.append(row);
+  });
+}
+function toJpeg(file){
+  return new Promise((ok,no)=>{
+    const u=URL.createObjectURL(file),im=new Image();
+    im.onerror=()=>{URL.revokeObjectURL(u);no(new Error("img"))};
+    im.onload=()=>{
+      URL.revokeObjectURL(u);
+      let max=900;
+      for(let n=0;n<4;n++,max=Math.round(max*.8)){
+        const k=Math.min(1,max/Math.max(im.naturalWidth,im.naturalHeight)),c=document.createElement("canvas");
+        c.width=Math.max(1,Math.round(im.naturalWidth*k));c.height=Math.max(1,Math.round(im.naturalHeight*k));
+        const x=c.getContext("2d");x.fillStyle="#000";x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);
+        for(const q of [.82,.7,.58,.46]){const d=c.toDataURL("image/jpeg",q);if(d.length<=420000)return ok(d)}
+      }
+      no(new Error("big"));
+    };
+    im.src=u;
+  });
+}
+$("#ct-file").onchange=e=>{
+  const f=e.target.files[0],p=$("#ct-prev");$("#ct-err").textContent="";
+  if(!f){p.hidden=true;return}
+  p.src=URL.createObjectURL(f);p.hidden=false;
+};
+$("#ct-add").onclick=e=>{
+  const er=$("#ct-err"),name=$("#ct-name").value.trim(),f=$("#ct-file").files[0];er.textContent="";
+  if(name.length<2){er.textContent="Escribí el nombre del corte.";return}
+  if(!f){er.textContent="Elegí una foto del corte.";return}
+  run(async()=>{
+    let img;
+    try{img=await toJpeg(f)}catch(x){er.textContent="No se pudo leer esa foto. Probá con otra imagen.";return}
+    const r=await adm("km11_admin_add_cut",{p_name:name,p_img:img});
+    if(r&&r.ok){toast("Corte añadido. Ya se ve en la web.");$("#ct-name").value="";$("#ct-file").value="";$("#ct-prev").hidden=true;await loadCuts()}
+    else er.textContent=r&&r.error==="too_many"?"Ya llegaste al máximo de cortes añadidos.":"No se pudo añadir el corte. Probá con otra foto.";
+  },e.currentTarget,er);
+};
+
+/* ---------- precio y contraseña ---------- */
+async function loadPrice(){
+  const s=await rpc("km11_public_state");
+  if(!s||!s.ok)throw new Error("state");
+  $("#pr-in").value=s.price;$("#pr-show").textContent="En la web se ve: "+money(s.price);$("#pr-err").textContent="";
+}
+$("#pr-in").oninput=()=>{const n=Math.floor(+$("#pr-in").value);$("#pr-show").textContent=n>0?"En la web se verá: "+money(n):""};
+$("#pr-save").onclick=e=>{
+  const er=$("#pr-err"),n=Math.floor(+$("#pr-in").value);er.textContent="";
+  if(!(n>=1&&n<=10000000)){er.textContent="Escribí un precio válido, en pesos y sin puntos.";return}
+  run(async()=>{
+    const r=await adm("km11_admin_set_price",{p_price:n});
+    if(r&&r.ok){$("#pr-show").textContent="En la web se ve: "+money(r.price);toast("Precio guardado: "+money(r.price)+".")}
+    else er.textContent="No se pudo guardar el precio.";
+  },e.currentTarget,er);
+};
+$("#pw-save").onclick=e=>{
+  const er=$("#pw-err"),o=$("#pw-old").value,n=$("#pw-new").value,n2=$("#pw-new2").value;er.textContent="";
+  if(n.length<8){er.textContent="La contraseña nueva tiene que tener al menos 8 caracteres.";return}
+  if(n!==n2){er.textContent="Las contraseñas nuevas no coinciden.";return}
+  run(async()=>{
+    const r=await adm("km11_admin_change_password",{p_old:o,p_new:n});
+    if(r&&r.ok){["#pw-old","#pw-new","#pw-new2"].forEach(i=>{$(i).value=""});toast("Contraseña cambiada.")}
+    else er.textContent=r&&r.error==="bad_password"?"La contraseña actual no es correcta.":"No se pudo cambiar la contraseña.";
+  },e.currentTarget,er);
+};
+
+/* ---------- arranque ---------- */
+if(TOK){$("#app").hidden=false;toApp()}else toLogin("");
+})();
+</script></body></html>
